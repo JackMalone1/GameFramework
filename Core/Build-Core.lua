@@ -9,8 +9,29 @@ project "Core"
 
    includedirs
    {
-      "Source"
+      "Source",
+      "%{IncludeDir.GLFW}",
+      "%{IncludeDir.Vulkan}",
+      "%{IncludeDir.VulkanSDK_LocalInclude}",
+      "%{IncludeDir.glm}",
+      "%{IncludeDir.ImGui}",
+      "%{IncludeDir.Box2D}",
+      "%{IncludeDir.entt}"
    }
+
+   links
+	{ 
+		"GLFW",
+		"ImGui",
+		"Box2D",
+		"%{Library.Vulkan}",
+		"%{Library.VulkanUtils}"
+	}
+
+	defines
+	{
+		"PX_PHYSX_STATIC_LIB", "GLM_FORCE_DEPTH_ZERO_TO_ONE"
+	}
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")

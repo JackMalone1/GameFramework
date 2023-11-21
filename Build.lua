@@ -10,6 +10,12 @@ workspace "Game Framework"
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
+group "Dependencies"
+   include "Hazel/vendor/GLFW"
+   include "Hazel/vendor/ImGui"
+   include "Hazel/vendor/Box2D"
+group ""
+
 group "Core"
 	include "Core/Build-Core.lua"
 group ""
