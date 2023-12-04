@@ -2,7 +2,6 @@ include "Dependencies.lua"
 
 group "Dependencies"
 include "Core/vendor/GLFW"
-include "Core/vendor/ImGui"
 include "Core/vendor/Box2D"
 group ""
 
@@ -27,7 +26,6 @@ project "Core"
       "%{IncludeDir.Vulkan}",
       "%{IncludeDir.VulkanSDK_LocalInclude}",
       "%{IncludeDir.glm}",
-      "%{IncludeDir.ImGui}",
       "%{IncludeDir.Box2D}",
       "%{IncludeDir.entt}",
       "%{IncludeDir.VulkanSDK}"
@@ -36,7 +34,6 @@ project "Core"
    links
 	{ 
 		"GLFW",
-		"ImGui",
 		"Box2D",
 		"%{Library.Vulkan}",
 		"%{Library.VulkanUtils}"

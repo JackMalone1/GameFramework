@@ -1,9 +1,6 @@
 [submodule "Core/vendor/GLFW"]
 	path = Core/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
-[submodule "Core/vendor/imgui"]
-	path = Core/vendor/imgui
-	url = https://github.com/TheCherno/imgui
 [submodule "Core/vendor/glm"]
 	path = Core/vendor/glm
 	url = https://github.com/g-truc/glm
