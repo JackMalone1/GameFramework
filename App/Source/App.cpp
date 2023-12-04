@@ -1,6 +1,8 @@
 #include "Core/Core.h"
+#include "Core/EntryPoint.h"
 
-int main()
+Framework::Application* CreateApplication(int argc, char** argv)
 {
-	Core::PrintHelloWorld();
+	auto* app = new Framework::Application();
+	return app;
 }

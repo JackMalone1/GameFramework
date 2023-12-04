@@ -1,4 +1,7 @@
 #pragma once
+#include "Application.h"
+extern Framework::Application* Framework::CreateApplication(int argc, char** argv);
+bool g_ApplicationRunning = true;
 
 namespace Framework
 {
