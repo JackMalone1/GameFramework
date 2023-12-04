@@ -1,3 +1,11 @@
+include "Dependencies.lua"
+
+group "Dependencies"
+include "Core/vendor/GLFW"
+include "Core/vendor/ImGui"
+include "Core/vendor/Box2D"
+group ""
+
 project "Core"
    kind "StaticLib"
    language "C++"
@@ -5,7 +13,12 @@ project "Core"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp" }
+   files { 
+    "Source/**.h",
+    "Source/**.cpp",
+    "%{prj.name}/vendor/VulkanMemoryAllocator/**.h",
+    "%{prj.name}/vendor/VulkanMemoryAllocator/**.cpp",
+    }
 
    includedirs
    {
@@ -16,7 +29,8 @@ project "Core"
       "%{IncludeDir.glm}",
       "%{IncludeDir.ImGui}",
       "%{IncludeDir.Box2D}",
-      "%{IncludeDir.entt}"
+      "%{IncludeDir.entt}",
+      "%{IncludeDir.VulkanSDK}"
    }
 
    links
