@@ -1,0 +1,9 @@
+[submodule "Core/vendor/GLFW"]
+	path = Core/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
+[submodule "Core/vendor/glm"]
+	path = Core/vendor/glm
+	url = https://github.com/g-truc/glm
+[submodule "Core/vendor/Box2D"]
+	path = Core/vendor/Box2D
+	url = https://github.com/TheCherno/Box2D
